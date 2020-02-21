@@ -1,0 +1,70 @@
+一.
+1.排序 sort()
+z = arr.sort()
+
+2.长度 length.
+注意!!:没有括号.
+array.length
+
+3.添加 push()
+arr.push()
+添加到末尾.
+
+数组和对象的区别:
+1.数组使用数字索引.
+对象使用命名索引.
+
+arr = [1,2,3]
+arr['bill']=23
+此时的arr长度不包括对象的长度.
+
+且如果访问bill对象,返回undefined.
+如果想访问,用命名索引方式.
+
+4.判断是否是数组,true,false:
+ES6提供的 Array.isArray(参数)
+
+
+
+二.数组方法:
+
+1.数组转换字符串:
+(1).toString()
+将数组转换为数组织(逗号分割)的字符串.
+str.toString()
+(2).join()
+str.join('*')
+
+2.添加元素:
+(1)unshift()
+在数组的开始位置添加元素.
+
+(2)合并数组:
+arr.concat('a','b')
+arr.concat(arr)
+并不会修改原数组.
+
+3.删除元素:
+(1)shift()
+删除首个元素,其余向前补.
+(2)pop()
+删除最后一个元素.修改原数组.
+替换:(因原生js没有好的删除)
+(3)splice(start,length,content)
+<1>替换:
+从0开始,替换几个长度,将该长度下的所有元素替换成第三个参数.
+<2>拼接:
+splice(start,0,content)
+length=0说明了不替换,所以构成拼接.
+
+4.改元素:
+arr[0]=str
+splice(start,length,content)
+
+5.裁剪数组:
+str.slice(1,5)
+取出从1开始,5结束的数组,并不会修改原数组,左闭右开
+
+6.数组排序
+sort()升序.
+reverse()降序.

@@ -1,0 +1,22 @@
+1.toString()
+num.toString()
+
+2.toFixed()
+返回指定位数小数的数字.
+num.toFixed(5)
+
+3.toExponential()
+num.toExponential()返回字符串值,它包含已被四舍五入并使用指数计数法的数字.
+
+4.Number(str)
+转换为数字格式.
+
+5.
+(1)parseInt()
+x = parseInt(12.33 or '12.33')
+解析一段字符串或数字,允许空格,只返回首个数字.
+(2)parseFloat()
+x = parseFloat(12.33 or '12.33')
+解析一段字符串或数字,允许空格,只返回首个数字(浮点数返回浮点数).
+
+

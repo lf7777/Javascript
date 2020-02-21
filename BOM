@@ -1,0 +1,71 @@
+一.概念:
+
+BOM:浏览器对象模型
+
+二.Window对象:
+
+所有浏览器都支持window对象.代表浏览器的窗口.
+
+(1)window size :
+两个属性可用于确定浏览器窗口的尺寸.
+这是一个包括所有浏览器的JS窗口尺寸解决方案.
+<script>
+let w = window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;
+let h = window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;
+</script>
+
+(2)window.open() 打开新窗口.
+(3)window.close() 关闭当前窗口.
+(4)window.moveTo 移动当前窗口.
+(5)window.resizeTo 重新调整当前窗口.
+
+三.Screen对象:
+window.screen对象包含用户屏幕的信息.
+(1)screen.width
+(2)screen.height
+(3)screen.availWidth
+(4)screen.availHeight
+(5)screen.colcorDepth
+(6)screen.pixelDepth
+
+四.Location对象:
+window.location对象可用于获取当前页面地址(URL)并把浏览器重定向到新页面上.
+(1)window.location.href 返回当前页面的href(URL).
+(2)window.location.hostname 返回web主机的域名.
+(3)window.location.pathname 返回当前页面的路径或文件名.
+(4)window.location.protocol 返回当前使用的web协议(http:或https:).
+(5)window.location.assign 加载新文档.
+
+五.History对象:
+window.history 对象包含浏览器历史.
+history.back() 等同于浏览器点击后退按钮.
+history.forward() 等同于浏览器点击前进按钮.
+
+六.Navigator对象:
+window.navigator对象包含有关访问者的信息.
+navigator.appName
+navigator.appCodeName
+navigator.platform
+
+七.弹出框:
+(1)alert:警告框
+(2)确认框:confirm()
+function myFunction(){
+	let txt;
+	if(confirm('Press a button)){
+		txt = '您按了确定';
+	else{
+		txt = '您按了取消';
+	}
+	}
+}
+
+八.Timing对象:
+(1)setTimeout(myFunction,3000)
+onclick="setTimeout(myFunction,3000)"
+想要在开始之前停止,需要从新写一个按钮,让setTimeout指向一个变量,新按钮的onclick事件为"clearTimeout(变量名)"
+
+(2)setInterval(myFcuntion,3000)
+在给定的时间间隔中,重复执行给定的函数.
+如想停止执行,和setTimeout相同.
+

@@ -1,0 +1,46 @@
+一.概念:
+HTML DOM(文档对象模型)
+DOM是 HTML 与语言的接口,允许程序和脚本动态地访问更新文档的内容结构和样式.
+HTML DOM是关于如何增加 删除 更改 获取HTML元素的标准.
+
+W3CDOM分为三个不同的部分:
+Core DOM - 所有文档类型的标准模型
+XML DOM - XML文档的标准模型
+HTML DOM - HTML文档的标准模型
+
+
+二.总结:
+HTML里面的所有元素在DOM中都被称为 对象 ,通过JS对 对象 进行编程,改变对象的属性(值),以及改变对象的方法(例如函数,动作)
+
+
+三.常见词汇:
+getElementById 翻译:得到元素通过Id.
+attribute 翻译:属性值.
+
+
+四.HTML对象的增删改查:
+
+1.查找HTML对象:
+(1)document.getElementByID(id) 		    通过Id.
+(2)document.getElementByClassName(name)     通过类名.
+(3)document.getElementByTagName(name)	    通过标签名.
+
+2.改变HTML对象:
+(1)Element.innerHTML = new html content     改变元素的内容.
+(2)Element.attribute = new value            改变元素的属性值.
+(3)Element.setAttribute(attribute,value)    改变元素的属性值.
+(4)Element.style.property = new style       改变元素的样式.
+
+3.增加HTML对象:
+(1)document.createElement(element) 	    创建HTML元素.
+(2)document.appendChild(element) 	    创建HTML元素.
+
+4.删除HTML对象:
+(1)document.removeElement(element)	    删除HTML元素.
+
+替换HTML对象:
+(1)document.replaceChild(element)	    替换HTML元素
+
+写入HTML输出流 document.write(text)
+
+

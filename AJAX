@@ -1,0 +1,96 @@
+一.AJAX概念:
+  Asynchronous(异步) JavaScript And XML
+XML和JSON(JavaScript Object Notation)都是用来传输和存储数据的.
+不同的地方通信,采用统一标准的数据格式,方便通信.
+
+效果:
+1.不刷新页面更新页面.
+2.在页面加载后从服务器请求数据.
+3.在页面加载后从服务器接收数据.
+4.在后台向服务器发送数据.
+
+二.AJAX工作原理:
+
+网页访问过程:请求和响应
+
+请求方式:GET和POST
+GET:纯请求数据时使用.
+POST:会发送数据给服务器时使用.
+
+AJAX就是通过运行JavaScript程序来发起HTTP请求,而不是非得把请求地址写到浏览器地址栏再按回车.
+
+核心为:XMLHttpRequest().
+let x = new XMLHttpRequest()
+浏览器中,发生某个事件,创建XMLHttpRequest对象,发送HttpRequest
+-->
+服务器中,处理HttpRequest,创建响应并将数据返回浏览器
+-->
+浏览器中,使用JS处理被返回的数据,并更新页面的内容.
+(通过Internet作为传输工具)
+
+
+三.XMLHttpRequest对象:
+(一)创建
+let xhttp;
+if(window.XMLHttpRequest){
+	xhhtp = new XMLHttpRequest();
+}else{
+//老版本IE5,6:	xhttp = new ActiveXObject('Microsoft.XMLHTTP');
+}
+
+(二)对象方法:
+1.取消请求:
+abort()
+取消当前请求.
+
+2.返回头部信息:
+getAllResponseHeaders()
+返回头部信息.
+
+3.返回特定的头部信息:
+getResponseHeader()
+
+4.规定请求:
+open()
+open(method,url,async,user,psw)
+method:请求类型 GET 或 POST.
+url:文件位置.
+async:true(异步)或false(同步).
+user:可选的用户名称.
+psw:可选的密码.
+
+5.将请求发送到服务器,用于GET请求:
+send()
+
+6.将请求发送到服务器,用于POST请求:
+send(string)
+
+7.添加值对:
+setRequestHeader()
+向要发送的报头添加标签/值对.
+
+(三)对象属性
+1.onreadystatechange
+定义当readyState属性发生变化时被调用的函数.
+
+2.readyState(state:状态)
+保存XMLHttpRequest的状态:
+0:请求未初始化
+1:服务器连接建立
+2:请求已收到
+3:正在处理请求
+4:请求已完成且响应已就绪
+
+3.responseText
+以字符串返回响应数据.
+
+4.responseXML
+以XML数据返回响应数据.
+
+5.status
+返回请求的状态号
+200:'OK'
+404:'Not Found'
+
+6.statusText
+返回状态文本(比如'OK'或'Not Found')

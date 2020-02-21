@@ -1,0 +1,70 @@
+1.js引入文件写在下方,先写会找不到元素.
+解:是因为:没有写文档就绪事件:
+window.onload=function(){
+
+}
+
+2.目前理解,js的效果的原理是通过给事件添加函数,在事件发生的时候执行函数里面的内容.
+
+3.有分号分割的js语句,可以放在同一行.
+同样 用 let声明也可以写在一行,逗号隔开.
+
+4.JavaScript声明变量,重复声明时不会重新赋值,和python不一样.
+更正:用var 声明用 var 声明的可以用var改值,let同理,但是用var的不能用let改值.
+
+5.null可以用来清空对象.
+
+6.null的数据类型是object,undefined的数据类型是undefined,array的数据类型是object.
+
+7.函数何时调用:
+(1)当事件发生时.
+(2)当JavaScript的代码调用它的时候.
+(3)自动的(自调用)
+
+8.onclick事件或者其他事件调用函数的时候需要加括号.
+
+9.字符串的加法会拼接,而如果是:
+a = '100',b=3.14;
+a*b=314
+
+10.let x = new Number(123)
+此时x的数据类型是object.
+y=123.y的数据类型是number.
+
+11.数组中可以保存任何对象,比如函数,数组,方法.
+
+12.Math.floor(Math.random()*101)
+返回0到100之间的随机数.
+
+13.三元运算符:
+variablename = (condition)?value1:value2
+如果为真返回第一个,如果为假返回第二个.(condition:状态)
+
+14.constructor属性.
+str.constructor //返回[Function:String]
+arr.constructor //返回[Function:Array]
+false.constructor //返回[Function:Boolean]
+{name:'bill'}.constructor //返回[Function:Object]
+new Date.constructor //返回[Function:Date]
+function(){}.constructor //返回[Function:Function]
+
+15.表单提交之:
+.value
+document.forms['myform']['fname'].value;
+这句话指的是完整的表单中
+
+16.isNaN()
+输入内容是字符串返回true.
+是数字返回false.
+'4'是数字.返回false.
+
+17.为对象增加原型属性或者方法:
+Person.prototype.eye='eye'
+
+18.getElementsByClassName()
+不能使用是因为,得到的元素放置入一个数组里面了.需要使用索引.
+
+19.网页中<script>标签的位置
+1.放在头部时 : 浏览器会先下载这些头部文件.
+优点:如果网页脚本多,在用户使用网页的过程中由于已经加载好,用的体验好.
+缺点:浏览器内核最多同时下载两个js文件,如果过大,会导致进入网页的速度变慢.

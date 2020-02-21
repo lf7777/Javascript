@@ -1,0 +1,10 @@
+1.
+表单提交之:
+.value
+document.forms['myform']['fname'].value;
+这句话指的是完整的表单中
+
+2.input type = 'text'里的value结果为在文本框里写内容.
+  input type = 'submit'里的value结果为只有一个按钮,按钮上的内容为value的值. 
+
+
